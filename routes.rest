@@ -1,0 +1,18 @@
+// local
+GET http://localhost:8080/contacts
+
+GET http://localhost:8080/contacts/6816c31651de9aab35415445
+
+GET http://localhost:8080/contacts/6816c36451de9aab35415447
+
+GET http://localhost:8080/contacts/6816c39451de9aab35415449
+
+// production
+
+GET https://express-server-c7bg.onrender.com/contacts
+
+GET https://express-server-c7bg.onrender.com/contacts/6816c31651de9aab35415445
+
+GET https://express-server-c7bg.onrender.com/contacts/6816c36451de9aab35415447
+
+GET https://express-server-c7bg.onrender.com/contacts/6816c39451de9aab35415449
