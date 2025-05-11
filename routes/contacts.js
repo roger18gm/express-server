@@ -1,4 +1,4 @@
-import { getAllContacts, getContactById } from '../controllers/contacts.js';
+import { createNewContact, deleteContactById, getAllContacts, getContactById, updateContactById } from '../controllers/contacts.js';
 import express from "express";
 
 const router = express.Router();
@@ -8,5 +8,11 @@ router.get("/", getAllContacts);
 
 // then this will be /contacts/:id
 router.get("/:id", getContactById);
+
+router.post("/", createNewContact);
+
+router.put("/:id", updateContactById);
+
+router.delete("/:id", deleteContactById)
 
 export default router;

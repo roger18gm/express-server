@@ -1,18 +1,61 @@
+//
 // local
+//
+
+// GET
+// get all
 GET http://localhost:8080/contacts
 
-GET http://localhost:8080/contacts/6816c31651de9aab35415445
+// get one contact
+GET http://localhost:8080/contacts/681fee16bf7e8fcb85af409a
 
-GET http://localhost:8080/contacts/6816c36451de9aab35415447
+// POST
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
 
-GET http://localhost:8080/contacts/6816c39451de9aab35415449
+{
+    "firstName":"Rick",
+    "lastName":"Ross",
+    "email":"ilikepears@mmg.com",
+    "favoriteColor":"gold",
+    "birthday":"06/05/73"
+}
 
+// PUT 
+
+// update all new properties
+PUT http://localhost:8080/contacts/681fee16bf7e8fcb85af409a HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Lil",
+    "lastName":"Wayne",
+    "email":"weezyfbaby@ymcmb.com",
+    "favoriteColor":"purple",
+    "birthday":"06/05/93"
+}
+
+// update just one
+PUT http://localhost:8080/contacts/681fee16bf7e8fcb85af409a HTTP/1.1
+content-type: application/json
+
+{
+    "lastName":"Baby"
+}
+
+// DELETE
+// this you may have to alter to another id from the collection
+DELETE http://localhost:8080/contacts/681ffcbc6332ce3fe196a4f4 HTTP/1.1
+
+
+//
 // production
+//
 
 GET https://express-server-c7bg.onrender.com/contacts
 
 GET https://express-server-c7bg.onrender.com/contacts/6816c31651de9aab35415445
 
-GET https://express-server-c7bg.onrender.com/contacts/6816c36451de9aab35415447
 
-GET https://express-server-c7bg.onrender.com/contacts/6816c39451de9aab35415449
+
+// highlight http request then type ctrl + alt + R
