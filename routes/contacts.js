@@ -13,6 +13,6 @@ router.post("/", createNewContact);
 
 router.put("/:id", updateContactById);
 
-router.delete("/:id", deleteContactById)
+router.delete("/:id", deleteContactById);
 
 export default router;
