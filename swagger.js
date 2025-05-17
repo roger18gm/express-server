@@ -5,7 +5,7 @@ const doc = {
         title: "Roger's Contact API",
         description: "API docs for MongoDB CRUD contacts API"
     },
-    host: "https://express-server-c7bg.onrender.com/"
+    host: "express-server-c7bg.onrender.com"
 };
 
 const outputFile = './swagger-output.json';
