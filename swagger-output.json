@@ -5,7 +5,7 @@
     "description": "API docs for MongoDB CRUD contacts API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://express-server-c7bg.onrender.com/",
   "basePath": "/",
   "schemes": [
     "http"
