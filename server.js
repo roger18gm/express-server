@@ -1,11 +1,19 @@
 import express from 'express';
 import routes from './routes/index.js';
+import bodyParser from 'body-parser';
 import mongodb from './db/mongoConnect.js';
 
 const app = express();
 const port = 8080;
 
 app.use(express.json());
+app
+    .use(bodyParser.json())
+    .use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+    })
+
 app.use("/", routes)
 
 mongodb.initDb((err, mongodb) => {
